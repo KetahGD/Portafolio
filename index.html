@@ -1,0 +1,309 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Portafolio de Rolando Silva Vique, desarrollador full stack con proyectos en React, Next.js, Supabase, Firebase, PHP, MySQL y mapas interactivos.">
+  <title>Rolando Silva Vique | Portafolio</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Space+Grotesk:wght@500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <canvas id="starfield" aria-hidden="true"></canvas>
+  <div class="page-glow" aria-hidden="true"></div>
+  <div class="scanlines" aria-hidden="true"></div>
+
+  <header class="site-header">
+    <a class="brand" href="#inicio" aria-label="Ir al inicio">
+      <span class="brand-mark">RS</span>
+      <span>Rolando Silva</span>
+    </a>
+    <nav class="nav" aria-label="Navegación principal">
+      <a href="#proyectos">Proyectos</a>
+      <a href="#stack">Stack</a>
+      <a href="#cv">CV</a>
+      <a href="#contacto">Contacto</a>
+    </nav>
+    <a class="header-cta" href="assets/Rolando-Silva-CV.pdf" target="_blank" rel="noreferrer">Descargar CV</a>
+  </header>
+
+  <main>
+    <section class="hero section" id="inicio">
+      <div class="hero-copy reveal">
+        <span class="eyebrow">FULL STACK DEVELOPER - TSU DSM</span>
+        <h1>Construyo productos web con lógica real, UI cuidada y enfoque de producción.</h1>
+        <p>
+          Soy Rolando Silva Vique, estudiante de Desarrollo de Software Multiplataforma. He creado marketplaces,
+          sistemas de inventario, plataformas educativas, mapas interactivos y catálogos con carrito, autenticación,
+          bases de datos y automatizaciones con IA.
+        </p>
+        <div class="hero-actions">
+          <a class="button primary" href="#proyectos">Ver proyectos</a>
+          <a class="button secondary" href="https://github.com/KetahGD" target="_blank" rel="noreferrer">GitHub</a>
+          <a class="button secondary" href="https://www.linkedin.com/in/rolando-silva-vique-407b00129/" target="_blank" rel="noreferrer">LinkedIn</a>
+        </div>
+      </div>
+
+      <aside class="player-card reveal" aria-label="Resumen profesional">
+        <div class="hud-top">
+          <span class="status-dot"></span>
+          <span>Perfil activo</span>
+        </div>
+        <div class="avatar">R</div>
+        <h2>Rolando Silva Vique</h2>
+        <p>Web developer - React, Next.js, Firebase, Supabase, PHP y MySQL.</p>
+        <div class="level-row">
+          <span>Nivel de proyecto</span>
+          <strong>Junior Full Stack</strong>
+        </div>
+        <div class="xp-bar" aria-label="Barra de experiencia">
+          <span></span>
+        </div>
+        <div class="mini-stats">
+          <div><strong>6+</strong><span>Proyectos</span></div>
+          <div><strong>B2</strong><span>Ingles</span></div>
+          <div><strong>1st</strong><span>Coding Rush</span></div>
+        </div>
+      </aside>
+    </section>
+
+    <section class="section metrics reveal" aria-label="Indicadores">
+      <article>
+        <span>01</span>
+        <strong>Apps con datos reales</strong>
+        <p>CRUD, dashboards, inventario, catálogos, autenticación y reportes.</p>
+      </article>
+      <article>
+        <span>02</span>
+        <strong>Interfaces completas</strong>
+        <p>Diseño responsive, flujos de usuario y pantallas listas para operar.</p>
+      </article>
+      <article>
+        <span>03</span>
+        <strong>IA y automatizacion</strong>
+        <p>FindBot, Auto Publicador IA, banners, copy promocional y Make.</p>
+      </article>
+    </section>
+
+    <section class="section" id="proyectos">
+      <div class="section-heading reveal">
+        <span class="eyebrow">MISSION SELECT</span>
+        <h2>Proyectos destacados</h2>
+        <p>Una selección de proyectos académicos, comerciales y personales con alcance full stack.</p>
+      </div>
+
+      <div class="projects-grid">
+        <article class="project-card featured reveal" data-gallery="findme" style="--accent:#ff314f">
+          <div class="project-media">
+            <img src="assets/findme-dashboard.png" alt="Dashboard vendedor de FindMe" loading="lazy">
+          </div>
+          <div class="project-content">
+            <div class="project-kicker">Marketplace SaaS local</div>
+            <h3>FindMe!</h3>
+            <p>
+              Marketplace local con Next.js, React, TypeScript y Supabase para conectar compradores con vendedores
+              cercanos mediante ubicación, catálogo, chat, perfiles de negocio y herramientas comerciales.
+            </p>
+            <ul class="feature-list">
+              <li>Google Auth, roles de comprador, vendedor y administrador.</li>
+              <li>Catálogo, mapa interactivo, chat en tiempo real y dashboard comercial.</li>
+              <li>FindBot, Auto Publicador IA, banners, programación y flujos con Gemini y Make.</li>
+            </ul>
+            <div class="tags">
+              <span>Next.js</span><span>TypeScript</span><span>Supabase</span><span>Realtime</span><span>Gemini</span>
+            </div>
+            <div class="project-links">
+              <a href="https://find-me-next-js.vercel.app/" target="_blank" rel="noreferrer">Ver demo</a>
+              <button type="button" data-open-gallery="findme">Capturas</button>
+            </div>
+          </div>
+        </article>
+
+        <article class="project-card reveal" data-gallery="peluches" style="--accent:#ffcc29">
+          <div class="project-media">
+            <img src="assets/peluches-home.png" alt="Catalogo textil online" loading="lazy">
+          </div>
+          <div class="project-content">
+            <div class="project-kicker">E-commerce textil</div>
+            <h3>Peluches Store - Catálogo Textil</h3>
+            <p>Catálogo online para telas y peluches con búsqueda, carrito, detalle por producto y pedido por WhatsApp.</p>
+            <div class="tags">
+              <span>React</span><span>Firebase</span><span>Firestore</span><span>Tailwind</span>
+            </div>
+            <div class="project-links">
+              <a href="https://peluchestore-376a8.web.app/" target="_blank" rel="noreferrer">Ver demo</a>
+              <a href="https://github.com/KetahGD/PeluchesStore" target="_blank" rel="noreferrer">GitHub</a>
+              <button type="button" data-open-gallery="peluches">Capturas</button>
+            </div>
+          </div>
+        </article>
+
+        <article class="project-card reveal" data-gallery="humanitos" style="--accent:#ff7a45">
+          <div class="project-media">
+            <img src="assets/humanitos-hero.png" alt="Humanitos en Construccion" loading="lazy">
+          </div>
+          <div class="project-content">
+            <div class="project-kicker">Plataforma educativa</div>
+            <h3>Humanitos en Construccion</h3>
+            <p>Escuela para padres con módulos, lecturas, videos, evaluaciones, progreso y generación de certificados.</p>
+            <div class="tags">
+              <span>React</span><span>Educacion</span><span>UI</span><span>Responsive</span>
+            </div>
+            <div class="project-links">
+              <a href="https://humanitosenconstruccion.com" target="_blank" rel="noreferrer">Ver demo</a>
+              <a href="https://github.com/KetahGD/HumanitosEnConstruccion" target="_blank" rel="noreferrer">GitHub</a>
+              <button type="button" data-open-gallery="humanitos">Capturas</button>
+            </div>
+          </div>
+        </article>
+
+        <article class="project-card reveal" data-gallery="dragones" style="--accent:#65ff82">
+          <div class="project-media">
+            <img src="assets/dragones-map.png" alt="Mapa interactivo Dragones Maps" loading="lazy">
+          </div>
+          <div class="project-content">
+            <div class="project-kicker">Mapa interactivo</div>
+            <h3>Dragones Maps</h3>
+            <p>Mapa de campus UTFV con ubicación, marcadores, búsqueda de edificios, calendario y autenticación.</p>
+            <div class="tags">
+              <span>JavaScript</span><span>Leaflet</span><span>Firebase</span><span>Firestore</span>
+            </div>
+            <div class="project-links">
+              <a href="https://ketahgd.github.io/Dragones-Maps/index.html" target="_blank" rel="noreferrer">Ver demo</a>
+              <a href="https://github.com/KetahGD/Dragones-Maps" target="_blank" rel="noreferrer">GitHub</a>
+              <button type="button" data-open-gallery="dragones">Capturas</button>
+            </div>
+          </div>
+        </article>
+
+        <article class="project-card reveal" data-gallery="english" style="--accent:#ff4f64">
+          <div class="project-media">
+            <img src="assets/english-vocab.png" alt="Curso de ingles Evolve 3" loading="lazy">
+          </div>
+          <div class="project-content">
+            <div class="project-kicker">Learning app</div>
+            <h3>English Course - Evolve 3</h3>
+            <p>Aplicación de estudio para inglés B1 con unidades, vocabulario, gramática, expresiones, writing, speaking y listening.</p>
+            <div class="tags">
+              <span>React</span><span>Vite</span><span>Educacion</span><span>Dark UI</span>
+            </div>
+            <div class="project-links">
+              <a href="https://english-course-nine.vercel.app/" target="_blank" rel="noreferrer">Ver demo</a>
+              <button type="button" data-open-gallery="english">Capturas</button>
+            </div>
+          </div>
+        </article>
+
+        <article class="project-card reveal" data-gallery="electrolab" style="--accent:#5de0ff">
+          <div class="project-media">
+            <img src="assets/electrolab-catalogo.jpeg" alt="Catalogo de ElectroLab" loading="lazy">
+          </div>
+          <div class="project-content">
+            <div class="project-kicker">Inventario y ventas</div>
+            <h3>ElectroLab</h3>
+            <p>Sistema para tienda de componentes electrónicos con inventario por sucursal, CRUD de productos, carrito y ventas.</p>
+            <div class="tags">
+              <span>PHP</span><span>MySQL</span><span>Bootstrap</span><span>AJAX</span>
+            </div>
+            <div class="project-links">
+              <a href="https://github.com/KetahGD/ElectroLab" target="_blank" rel="noreferrer">GitHub</a>
+              <button type="button" data-open-gallery="electrolab">Capturas</button>
+            </div>
+          </div>
+        </article>
+      </div>
+    </section>
+
+    <section class="section split" id="stack">
+      <div class="section-heading reveal">
+        <span class="eyebrow">LOADOUT</span>
+        <h2>Stack y habilidades</h2>
+        <p>Tecnologías que he usado en proyectos funcionales, con bases de datos, autenticación y despliegue.</p>
+      </div>
+      <div class="skill-board reveal">
+        <div>
+          <h3>Frontend</h3>
+          <p>HTML5, CSS3, JavaScript, React, Next.js, Tailwind CSS, Bootstrap, diseño responsive.</p>
+        </div>
+        <div>
+          <h3>Backend y datos</h3>
+          <p>PHP, Java, Python, SQL, MySQL, Oracle SQL, Firebase, Firestore, Supabase Database, Auth, Storage y Realtime.</p>
+        </div>
+        <div>
+          <h3>Herramientas</h3>
+          <p>Git, GitHub, VS Code, Android Studio, Vercel, Firebase Hosting, Gemini AI, Make, Power BI Desktop y APIs externas.</p>
+        </div>
+        <div>
+          <h3>Producto</h3>
+          <p>CRUD, dashboards, chat, catálogos, mapas, carritos, reportes, perfiles, roles y automatizaciones.</p>
+        </div>
+      </div>
+    </section>
+
+    <section class="section cv-section" id="cv">
+      <div class="section-heading reveal">
+        <span class="eyebrow">PLAYER LOG</span>
+        <h2>CV resumido</h2>
+      </div>
+      <div class="timeline reveal">
+        <article>
+          <span>2024 - 2026</span>
+          <h3>Universidad Tecnológica Fidel Velázquez</h3>
+          <p>TSU en Desarrollo de Software Multiplataforma.</p>
+        </article>
+        <article>
+          <span>2024 - Presente</span>
+          <h3>Language Teacher - Harmon Hall</h3>
+          <p>Clases de inglés A1 a B1, comunicación, organización y resolución de problemas.</p>
+        </article>
+        <article>
+          <span>2021 - 2023</span>
+          <h3>Social Media Manager & Designer - Creaciones Tevi</h3>
+          <p>Administración de redes, diseño promocional y presencia digital.</p>
+        </article>
+        <article>
+          <span>Logros</span>
+          <h3>Competencias y certificaciones</h3>
+          <p>1er lugar Coding Rush Primavera 2024, 3er lugar Coding Rush 2023, B2 British Council, HSK1 y Swift Basics.</p>
+        </article>
+      </div>
+    </section>
+
+    <section class="section contact-section" id="contacto">
+      <div class="contact-card reveal">
+        <span class="eyebrow">READY TO DEPLOY</span>
+        <h2>Hablemos de tu siguiente proyecto.</h2>
+        <p>Busco oportunidades como practicante, junior developer o soporte IT con enfoque en desarrollo web y software.</p>
+        <div class="contact-actions">
+          <a class="button primary" href="mailto:rolandosilva1007@gmail.com">rolandosilva1007@gmail.com</a>
+          <a class="button secondary" href="tel:+525572049981">5572049981</a>
+          <a class="button secondary" href="https://www.linkedin.com/in/rolando-silva-vique-407b00129/" target="_blank" rel="noreferrer">LinkedIn</a>
+          <a class="button secondary" href="assets/Rolando-Silva-CV.docx" target="_blank" rel="noreferrer">CV DOCX</a>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <div class="gallery-modal" id="galleryModal" hidden>
+    <div class="modal-backdrop" data-close-gallery></div>
+    <section class="modal-panel" role="dialog" aria-modal="true" aria-labelledby="galleryTitle">
+      <button class="modal-close" type="button" data-close-gallery aria-label="Cerrar galería">Cerrar</button>
+      <div>
+        <span class="eyebrow">SCREEN GALLERY</span>
+        <h2 id="galleryTitle">Proyecto</h2>
+      </div>
+      <img id="galleryImage" src="" alt="">
+      <div class="gallery-controls" id="galleryControls"></div>
+    </section>
+  </div>
+
+  <footer class="site-footer">
+    <span>Rolando Silva Vique</span>
+    <span>Portafolio web - 2026</span>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
