@@ -1,4 +1,6 @@
 :root {
+  --content-max: 1680px;
+  --content-gutter: clamp(1rem, 3vw, 4rem);
   --bg: #08090d;
   --bg-2: #11131b;
   --panel: rgba(18, 20, 29, 0.82);
@@ -97,7 +99,7 @@ button {
   grid-template-columns: auto 1fr auto;
   align-items: center;
   gap: 1rem;
-  width: min(1180px, calc(100% - 2rem));
+  width: min(var(--content-max), calc(100% - var(--content-gutter)));
   margin: 1rem auto 0;
   padding: 0.7rem;
   border: 1px solid var(--line);
@@ -167,14 +169,14 @@ button {
 }
 
 .section {
-  width: min(1180px, calc(100% - 2rem));
+  width: min(var(--content-max), calc(100% - var(--content-gutter)));
   margin: 0 auto;
   padding: 6rem 0;
 }
 
 .hero {
   display: grid;
-  grid-template-columns: minmax(0, 1.35fr) minmax(320px, 0.65fr);
+  grid-template-columns: minmax(0, 1.45fr) minmax(340px, 0.55fr);
   align-items: center;
   gap: 2rem;
   min-height: calc(100vh - 6rem);
@@ -211,15 +213,15 @@ h3 {
 }
 
 h1 {
-  max-width: 980px;
+  max-width: 1180px;
   margin-top: 1rem;
-  font-size: clamp(3rem, 8vw, 6.8rem);
+  font-size: clamp(3.2rem, 6.2vw, 7rem);
   text-wrap: balance;
 }
 
 .hero-copy p,
 .section-heading p {
-  max-width: 760px;
+  max-width: 920px;
   color: var(--muted);
   font-size: 1.08rem;
 }
@@ -416,7 +418,7 @@ h1 {
 
 .projects-grid {
   display: grid;
-  grid-template-columns: repeat(2, minmax(0, 1fr));
+  grid-template-columns: repeat(3, minmax(0, 1fr));
   gap: 1rem;
 }
 
@@ -433,7 +435,7 @@ h1 {
 .project-card.featured {
   grid-column: 1 / -1;
   display: grid;
-  grid-template-columns: minmax(0, 1.05fr) minmax(360px, 0.95fr);
+  grid-template-columns: minmax(0, 1.25fr) minmax(420px, 0.75fr);
 }
 
 .project-card:hover {
@@ -448,7 +450,7 @@ h1 {
 }
 
 .project-card.featured .project-media {
-  min-height: 420px;
+  min-height: 460px;
 }
 
 .project-media img {
@@ -611,7 +613,7 @@ h1 {
 
 .modal-panel {
   position: relative;
-  width: min(1080px, 100%);
+  width: min(1320px, 100%);
   max-height: 92vh;
   padding: 1rem;
   border: 1px solid rgba(255, 45, 73, 0.5);
@@ -666,7 +668,7 @@ h1 {
   display: flex;
   justify-content: space-between;
   gap: 1rem;
-  width: min(1180px, calc(100% - 2rem));
+  width: min(var(--content-max), calc(100% - var(--content-gutter)));
   margin: 0 auto;
   padding: 2rem 0 3rem;
   color: var(--muted);
@@ -683,6 +685,16 @@ h1 {
 .reveal.visible {
   opacity: 1;
   transform: translateY(0);
+}
+
+@media (max-width: 1180px) {
+  .projects-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  .project-card.featured {
+    grid-template-columns: minmax(0, 1.05fr) minmax(360px, 0.95fr);
+  }
 }
 
 @media (max-width: 940px) {
@@ -725,12 +737,12 @@ h1 {
 
 @media (max-width: 560px) {
   .section {
-    width: min(100% - 1rem, 1180px);
+    width: min(100% - 1rem, var(--content-max));
     padding: 4rem 0;
   }
 
   .site-header {
-    width: min(100% - 1rem, 1180px);
+    width: min(100% - 1rem, var(--content-max));
     margin-top: 0.5rem;
   }
 
